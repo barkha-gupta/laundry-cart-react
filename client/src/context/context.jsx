@@ -56,7 +56,7 @@ function ContextProvider({children}){
     //for registeration
     const userRegisteration= (formData) => {
         const {name, email, phone, state, district, address, pincode, password, isAgreeToTandC}= formData;
-        fetch("http://localhost:8000/user/register", {
+        fetch("https://laundry-cart-backend-v46g.onrender.com/user/register", {
             method: "POST",
             headers : {
                 "Content-Type": "application/json"
@@ -81,7 +81,7 @@ function ContextProvider({children}){
     //for login
     const userLogin = (formData) =>{
         const {email, password}= formData;
-        fetch("http://localhost:8000/user/login", {
+        fetch("https://laundry-cart-backend-v46g.onrender.com/user/login", {
             method: "POST",
             headers: {
                 "Content-Type" : "application/json"
@@ -107,7 +107,7 @@ function ContextProvider({children}){
 
     function getUser(){
         const token= localStorage.getItem("token");
-        fetch("http://localhost:8000/order/userDetails", {
+        fetch("https://laundry-cart-backend-v46g.onrender.com/order/userDetails", {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",
