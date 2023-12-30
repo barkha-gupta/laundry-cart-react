@@ -59,7 +59,9 @@ function ContextProvider({ children }) {
     }
     return formErrors;
   }
+  const url = "https://laundry-cart-backend-v46g.onrender.com/";
   //https://laundry-cart-backend-v46g.onrender.com
+  //http://localhost:8000/user/register
   //for registeration
   const userRegisteration = (formData) => {
     const {
@@ -73,7 +75,7 @@ function ContextProvider({ children }) {
       password,
       isAgreeToTandC,
     } = formData;
-    fetch("http://localhost:8000/user/register", {
+    fetch(`${url}user/register`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -106,7 +108,7 @@ function ContextProvider({ children }) {
   //for login
   const userLogin = (formData) => {
     const { email, password } = formData;
-    fetch("http://localhost:8000/user/login", {
+    fetch(`${url}user/login`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -133,7 +135,7 @@ function ContextProvider({ children }) {
 
   function getUser() {
     const token = localStorage.getItem("token");
-    fetch("http://localhost:8000/order/userDetails", {
+    fetch(`${url}order/userDetails`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",

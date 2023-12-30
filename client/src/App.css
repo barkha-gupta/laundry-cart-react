@@ -20,3 +20,7 @@ a {
   justify-content: center;
   background-color: rgba(0, 0, 0, 0.085);
 }
+:root {
+  --primary-font-color: #5861ae;
+  --secondary-font-color: #4552c1;
+}

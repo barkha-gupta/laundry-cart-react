@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import "./create-order.css";
 import Side_Navbar from "../../components/side-navbar/side-navbar";
 import Main_Header from "../../components/main-header/main-header";
@@ -8,9 +8,9 @@ export default function Create_order() {
   return (
     <>
       <Main_Header />
-      <div className='hero-container'>
+      <div className="hero-container">
         <Side_Navbar />
-        <div className="create-order-container">
+        {/* <div className="create-order-container">
           <div className='create-order-container-row1'>
             <span>Create Order</span>
             <span style={{"position": "relative"}}>
@@ -29,9 +29,9 @@ export default function Create_order() {
               Proceed
             </button>
           </div>
-        </div>
+        </div> */}
       </div>
       <Footer />
     </>
-  )
+  );
 }

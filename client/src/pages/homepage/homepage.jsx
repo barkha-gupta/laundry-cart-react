@@ -20,9 +20,9 @@ export default function Homepage() {
       <div className="hero-container">
         <Side_Navbar />
         <div className="home-container">
-          {/* <Link to="/createorder"> */}
-          <button className="create_order_btn">CREATE ORDER</button>
-          {/* </Link> */}
+          <Link to="/createorder">
+            <button className="create_order_btn">CREATE ORDER</button>
+          </Link>
         </div>
       </div>
       <Footer />
